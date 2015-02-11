@@ -110,19 +110,33 @@ rpcpassword=23Z6vudseoKuE1UVA8ujPbmqXfHaEVc6DsYX4PNw5PXZ"
 
 copy the rpcuser and rpcpassword 
 
-    nano -w .litecoin/litecoin.conf
+    nano -w .vegascoin/vegascoin.conf
 
-set the server, rpcallowip, rpcuser, rpcpassword
+passte the following and change your rpcuser and rpcpassword, save and exit as u done editing.
 
-server=1
-rpcallowip=127.0.0.1
-rpcuser=vegascoinrpc
-rpcpassword=23Z6vudseoKuE1UVA8ujPbmqXfHaEVc6DsYX4PNw5PXZ
+     server=1
+     rpcallowip=127.0.0.1
+     rpcuser=vegascoinrpc
+     rpcpassword=23Z6vudseoKuE1UVA8ujPbmqXfHaEVc6DsYX4PNw5PXZ
+     rpcport=52401
+     port=52400
+     addnode=node.vegascoin.co
+     addnode=eu.nodes.vegascoin.co
+     addnode=east.us.nodes.vegascoin.co
 
-run vegascoind again
-    vegascoind
 
-and wait for blockchain sync
+run vegascoind again, as the blockchain in syncing use getinfo to check if  block count is counting up.
+
+    vegascoind -daemon
+    vegascoind getinfo
+    vegascoind getnewaddress try-send-10VGC-to-the-following-address
+
+
+
+
+
+
+
 
 Ubuntu 13.10: sudo apt-get install libsqlite3-dev sqlite3 build-essential libmemcached-dev libcurl4-openssl-dev zlib1g-dev libjansson-dev curl memcached automake gcc libevent-1.4-2 libevent-extra-1.4-2 libevent1-dev libjansson-dev libjansson4 libmemcached10 libmemcached-dev libminiupnpc8 libminiupnpc-dev libboost-thread1.53.0 libboost-thread1.53-dev libdb5.3++ libdb5.3++-dev libboost-system1.53.0 libboost-system1.53-dev libboost-filesystem1.53.0  libboost-filesystem1.53-dev libboost-program-options1.53.0 libboost-program-options1.53-dev libboost-iostreams1.53.0 libboost-iostreams1.53-dev libboost-iostreams1.53.0 libboost-iostreams1.53-dev libboost-date-time1.53.0 libboost-date-time1.53-dev  libboost-signals1.53.0  libboost-signals1.53-dev libboost-regex1.53.0 libboost-regex1.53-dev libboost1.53-dev libboost-system1.53-dev libboost-system1.53.0 libboost-chrono1.53-dev libboost-chrono1.53.0 build-essential libcurl4-openssl-dev libdb5.3-dev libdb5.3++-dev qt5-default qt4-qmake qt4-linguist-tools libqt4-dev-bin libqt4-dev
 Ubuntu 14.04: sudo apt-get install libsqlite3-dev sqlite3 build-essential libmemcached-dev libcurl4-openssl-dev zlib1g-dev libjansson-dev curl memcached automake gcc libevent-1.4-2 libevent-extra-1.4-2 libevent1-dev libjansson-dev libjansson4 libmemcached10 libmemcached-dev libminiupnpc8 libminiupnpc-dev libboost-thread1.54.0 libboost-thread1.54-dev libdb5.3++ libdb5.3++-dev libboost-system1.54.0 libboost-system1.54-dev libboost-filesystem1.54.0 libboost-filesystem1.54-dev libboost-program-options1.54.0 libboost-program-options1.54-dev libboost-iostreams1.54.0 libboost-iostreams1.54-dev libboost-iostreams1.54.0 libboost-iostreams1.54-dev libboost-date-time1.54.0 libboost-date-time1.54-dev libboost-signals1.54.0 libboost-signals1.54-dev libboost-regex1.54.0 libboost-regex1.54-dev libboost1.54-dev libboost-system1.54-dev libboost-system1.54.0 libboost-chrono1.54-dev libboost-chrono1.54.0 build-essential libboost-all-dev libcurl4-openssl-dev libdb5.3-dev libdb5.3++-dev qt5-default qt4-qmake qt4-linguist-tools libqt4-dev-bin libqt4-dev
